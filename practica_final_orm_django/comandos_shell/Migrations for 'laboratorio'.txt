@@ -1,0 +1,40 @@
+Migrations for 'laboratorio':
+  laboratorio\migrations\0002_actualizado_campos.py
+    - Add field especialidad to directorgeneral
+    - Add field ciudad to laboratorio
+    - Add field pais to laboratorio
+
+(venv) C:\Respaldo\Beca\CPFS\7\Emanuel Bustos Final Drilling\practica_final_orm_django>py manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, laboratorio, sessions
+Running migrations:
+  Applying laboratorio.0002_actualizado_campos... OK
+
+(venv) C:\Respaldo\Beca\CPFS\7\Emanuel Bustos Final Drilling\practica_final_orm_django>py manage.py showmigrations
+admin
+ [X] 0001_initial
+ [X] 0002_logentry_remove_auto_add
+ [X] 0003_logentry_add_action_flag_choices
+auth
+ [X] 0001_initial
+ [X] 0002_alter_permission_name_max_length
+ [X] 0003_alter_user_email_max_length
+ [X] 0004_alter_user_username_opts
+ [X] 0005_alter_user_last_login_null
+ [X] 0006_require_contenttypes_0002
+ [X] 0007_alter_validators_add_error_messages
+ [X] 0008_alter_user_username_max_length
+ [X] 0009_alter_user_last_name_max_length
+ [X] 0010_alter_group_name_max_length
+ [X] 0011_update_proxy_permissions
+ [X] 0012_alter_user_first_name_max_length
+contenttypes
+ [X] 0001_initial
+ [X] 0002_remove_content_type_name
+laboratorio
+ [X] 0001_initial
+ [X] 0002_actualizado_campos
+sessions
+ [X] 0001_initial
+
+(venv) C:\Respaldo\Beca\CPFS\7\Emanuel Bustos Final Drilling\practica_final_orm_django>

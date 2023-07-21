@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="container">
+          <div class="card border-light shadow-sm rounded">
+            <div class="card-header">
+              <h2 class="text-center">Laboratorios</h2>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>Nombre</th>
+                          <th>Ciudad</th>
+                          <th>País</th>
+                          <th>Edit</th>
+                          <th>Delete</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {% for laboratorio in laboratorios %}
+                      <tr>
+                          <td>{{ laboratorio.nombre }}</td>
+                          <td>{{ laboratorio.ciudad }}</td>
+                          <td>{{ laboratorio.pais }}</td>
+                          <td>
+                              <a href="{% url 'editar' id=laboratorio.id %}" class="btn btn-success m-2">Actualizar</a>
+                          </td>
+                          <td>
+                              <a href="{% url 'eliminar' id=laboratorio.id %}" class="btn  btn-danger m-2">Eliminar</a>
+                          </td>
+                      </tr>
+                      {% endfor %}
+                  </tbody>
+              </table>
+            </div>
+            <div class="container text-center">
+              <a href="{% url 'insertar' %}" class="btn btn-primary m-0 mt-2 mb-4">Agregar laboratorio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <p class="alert alert-info col-3 mt-3">Usted ha visitado esta página {{ num_visits }} {% if num_visits == 1 %}vez{% else %}veces{% endif %}.</p>
+    </div>
+</body>
+{% endblock %}

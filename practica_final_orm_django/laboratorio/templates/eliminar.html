@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="card border-light shadow-sm rounded">
+    <div class="card-body text-center">
+      <h2 class="card-title">Eliminar Laboratorio</h2>
+      <p class="card-text">¿Estás seguro de que deseas eliminar el laboratorio "{{ laboratorio.nombre }}"?</p>
+      <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a href="{% url 'mostrar' %}" class="btn btn-success">Retornar</a> 
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card border-light shadow-sm rounded">
+        <div class="card-header">
+          <h2 class="text-center">Actualizar Laboratorio</h2>
+        </div>
+        <form method="POST" class="border p-4 rounded shadow-sm">
+          {% csrf_token %}
+          <div class="form-group row">
+            <label for="{{ form.nombre.id_for_label }}" class="col-sm-4 col-form-label">Nombre:</label>
+            <div class="col-sm-8">
+              {{ form.nombre }}
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="{{ form.ciudad.id_for_label }}" class="col-sm-4 col-form-label">Ciudad:</label>
+            <div class="col-sm-8">
+              {{ form.ciudad }}
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="{{ form.pais.id_for_label }}" class="col-sm-4 col-form-label">Pais:</label>
+            <div class="col-sm-8">
+              {{ form.pais }}
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <p>¿Información de laboratorios?</p>
+        <a href="{% url 'mostrar' %}" class="btn btn-primary">Ir a información de laboratorios</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

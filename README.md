@@ -3,7 +3,7 @@
 
 ## Descripción
 
-Este proyecto es un simulador para la fabricación de productos farmacéuticos, construido con Django en el backend, Bootstrap y CSS en el frontend, y con pequeñas implementaciones de JavaScript y HTMX para optimizar el rendimiento de la página principal. El simulador permite administrar laboratorios, directores generales y productos farmacéuticos, realizando operaciones de CRUD y consultas en la base de datos.
+Este proyecto es un simulador para la fabricación de productos farmacéuticos, construido con Django en el backend, Bootstrap en el frontend. El simulador permite administrar laboratorios, directores generales y productos farmacéuticos, realizando operaciones de CRUD y consultas en la base de datos.
 
 
 ## Requerimientos
